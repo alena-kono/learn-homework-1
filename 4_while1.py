@@ -18,6 +18,5 @@ def hello_user():
       user_answer = input('How are you?\n')
 
 
-
 if __name__ == "__main__":
     hello_user()
