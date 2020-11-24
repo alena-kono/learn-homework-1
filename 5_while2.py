@@ -12,16 +12,26 @@
 
     Пользователь: Что делаешь?
     Программа: Программирую
-    
+
 """
 
-questions_and_answers = {}
+QUESTIONS_ANSWERS = {
+    'how are you?': 'great',
+    'what are you doing?': 'i am programming',
+    'do you love python?': 'certainly yes',
+    'could you make me a cup of tea?': 'maybe another time',
+}
 
-def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+
+def ask_user(answers_dict: dict):
+
+    while True:
+        user_question = input('Ask me a question:\n').lower()
+        print(answers_dict.get(
+            user_question,
+            'Sorry, I did not understand your question..'
+            ))
+
+
 if __name__ == "__main__":
-    ask_user(questions_and_answers)
+    ask_user(answers_dict=QUESTIONS_ANSWERS)
